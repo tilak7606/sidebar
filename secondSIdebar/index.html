@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-yellow-400 font-serif">
+
+    <span class="absolute lg:hidden text-white text-4xl cursor-pointer" onclick="Openbar()">
+        <i class="fa-solid fa-bars hover:text-blue-400 "></i>
+    </span>
+    <div class="sidebar w-[300px] bg-yellow-600 h-screen overflow-y-auto lg:left-0 left-[-300px] fixed top-0 bottom-0 duration-1000 text-center">
+        <div class="text-xl text-gray-100">
+            <div class="flex justify-between items-center p-2.5 mt-2">
+                <i class="fa-solid fa-cannabis"></i>
+                <h1 class="hover:text-blue-600 font-bold ">Tailwind</h1>
+                <i class="fa-solid fa-x hover:text-blue-600 lg:hidden cursor-pointer rounded-md " onclick="Openbar()"></i>
+            </div>
+            <hr class="leading-7 mt-4 text-gray-400">
+
+            <div>
+                <div class="bg-gray-100 rounded-md m-3 mt-7 p-1.5 items-center">
+                    <i class="fa-solid fa-magnifying-glass px-1 hover:text-blue-400  cursor-pointer duration-500 text-zinc-400"></i>
+                    <input type="text" class="text-gray-700 bg-transparent  focus:outline-none" placeholder="Serach">
+                </div>
+                 <hr class="leading-7 mt-8 text-gray-400">
+
+                 <div class="flex items-center justify-center mx-6 cursor-pointer duration-500 mt-6 ">
+                    <i class="fa-solid fa-house text-sm hover:text-blue-400 "></i>
+                    <h1 class="hover:text-blue-400 ml-3">Home</h1>
+                 </div>
+                 <div class="flex items-center justify-center mx-6 cursor-pointer duration-500 mt-6 ">
+                    <i class="fa-solid fa-bookmark text-sm hover:text-blue-400 "></i>
+                    <h1 class="hover:text-blue-400 ml-3">Bookmark</h1>
+                 </div>
+                 <div class="flex items-center justify-center mx-6 cursor-pointer duration-500 mt-6 ">
+                    <i class="fa-solid fa-message text-sm hover:text-blue-400"></i>
+                    <h1 class="hover:text-blue-400 ml-3">Messages</h1>
+                 </div>
+                 <div class="flex items-center justify-center mx-6 cursor-pointer duration-500 mt-6 " onclick="dropDown()">
+                    <i class="fa-solid fa-comments text-sm hover:text-blue-400"></i>
+                    
+                    <h1 class="hover:text-blue-400 ml-3">Chats</h1>
+                    <i class="fa-solid fa-arrow-up mx-3 hover:text-blue-400 " id="arrow" ></i>
+                 </div>
+
+                 <div class="submenu text-sm w-4/5 mt-2 leading-7 mx-12">
+                    <h1 class="hover:text-blue-400 cursor-pointer rounded-md p-1">Social</h1>
+                    <h1 class="hover:text-blue-400 cursor-pointer rounded-md p-1">Friends</h1>
+                    <h1 class="hover:text-blue-400 cursor-pointer rounded-md p-1">Personal</h1>
+                 </div>
+
+                 <div class="flex items-center justify-center mx-6 cursor-pointer duration-500 mt-6 ">
+                    <i class="fa-solid fa-right-from-bracket text-sm hover:text-blue-400"></i>
+                  
+                    <h1 class="hover:text-blue-400 ml-3">Logout</h1>
+                 </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function dropDown(){
+            document.querySelector('.submenu').classList.toggle('hidden')
+            document.querySelector('#arrow').classList.toggle('rotate-180')
+        }
+        
+        function Openbar() {
+            document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+        }
+    </script>
+    
+</body>
+</html>
